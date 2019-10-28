@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+    <canvas id = " myCanvas " width = " 300px " height = " 500px " style = " border: 1px solid beige" ></canvas>
+</head>
+<body>
+<script>
+    let c=document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    function Rectangle(x ,y ,width ,height ,color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.render = function () {
+            ctx.fillStyle =this.color;
+            ctx.fillRect(this.x,this.y,this.width,this.height);
+
+        }
+    }
+   let rec= Rectangle2(10,10,200,100,'# 000000');
+    rec.render();
+
+</script>
+</body>
+</html>
